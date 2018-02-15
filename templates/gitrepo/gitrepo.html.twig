@@ -1,0 +1,26 @@
+Symfony git repositiries
+
+{% for repository in repositories %}
+    <div class="item {% if loop.first %} active{% endif %}">
+
+        <div>
+            <div class="">
+                {% if repository.owner.html_url %}
+                <a href="{{ repository.owner.html_url }}">
+                    {% endif %}
+                        {{ repository.name }}
+                    {% if repository.owner.html_url %}
+                </a>
+                {% endif %}
+                <!--Promo Text starts -->
+
+                <div>
+                    {% if repository.name %}<h2>{{ repository.name }}</h2>{% endif %}
+                    {% if repository.full_name %}<p>{{ repository.full_name }}</p>{% endif %}
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+{% endfor %}
