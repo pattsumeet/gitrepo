@@ -5,11 +5,11 @@ Symfony git repositiries
 
         <div>
             <div class="">
-                {% if repository.owner.html_url %}
-                <a href="{{ repository.owner.html_url }}">
+                {% if repository.html_url %}
+                <a href="{{ repository.html_url }}">
                     {% endif %}
                         {{ repository.name }}
-                    {% if repository.owner.html_url %}
+                    {% if repository.html_url %}
                 </a>
                 {% endif %}
                 <!--Promo Text starts -->
